@@ -5,7 +5,12 @@ function App() {
   return (
     <div className="app">
       <h1>Hola Mundo!!</h1>
-    </div>
+
+      {/* Spotify Logo */}
+      {/* Login with spotify*/}
+
+      <Login />
+      </div>
   );
 }
 
