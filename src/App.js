@@ -1,16 +1,13 @@
 import React from 'react';
 import './App.css';
+import Login from './Login';
 
 function App() {
   return (
-    <div className="app">
-      <h1>Hola Mundo!!</h1>
-
-      {/* Spotify Logo */}
-      {/* Login with spotify*/}
-
+    <div className="App">
+      {/* Lee el codigo de .Login */}
       <Login />
-      </div>
+    </div>
   );
 }
 
