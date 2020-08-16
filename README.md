@@ -1,10 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
+
 Create APP:
 
-### 'npx create-react-app spotify-clone-app'
-
-## Available Scripts
+### `npx create-react-app spotify-clone-app`
 
 In the project directory, you can run:
 
