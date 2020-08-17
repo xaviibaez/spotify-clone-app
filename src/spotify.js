@@ -20,6 +20,18 @@ const scopes = [
     "user-modify-playback-state",
 ];
 
+//Recuperar el token de la URL y la tratamos
+export const getTokenFromUrl = () => {
+    return window.location.hash
+    .substring(1)
+    .split("&")
+    .reduce((initial, item) => {
+      var parts = item.split("=");
+      initial[parts[0]] = decodeURIComponent(parts[1]);
+
+      return initial;
+    }, {});
+}
 
 //accessURL -> URL que recoje Login.js para hacer el acceso
 export const loginUrl = `${authEndpoint}?client_id=${clientId}&redirect_uri=${redirectUri}&scope=${scopes.join(
