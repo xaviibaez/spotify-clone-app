@@ -6,6 +6,10 @@ Create APP:
 
 ### `npx create-react-app spotify-clone-app`
 
+Spotify API:
+
+### `npm i spotify-web-api-js`
+
 In the project directory, you can run:
 
 ### `npm start`
