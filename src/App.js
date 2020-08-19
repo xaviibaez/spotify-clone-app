@@ -4,7 +4,7 @@ import Login from './Login';
 import { getTokenFromUrl } from './spotify';
 import SpotifyWebApi from "spotify-web-api-js";
 
-//Objeto que con el que usaremos con la api de spotify
+//Objeto general con el que usaremos con la api de spotify
 const spotify = new SpotifyWebApi();
 
 function App() {
@@ -26,11 +26,16 @@ function App() {
       setToken(_token);
       //Le damos el token de seguridad a Spotify
       spotify.setAccessToken(_token);
+      //Recoger el objeto cuenta del usuario
+      spotify.getMe().then(user => {
+        console.log("User: ", user);
+      })
     }
 
     console.log("Token: ", _token);
   }, []);
 
+  //El return es lo que se muestra en la web!
   return (
     <div className="App">
       {
