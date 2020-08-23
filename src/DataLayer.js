@@ -14,3 +14,6 @@ export const DataLayer = ({initialState, reducer, children}) => (
         {children}
     </DataLayerContext.Provider>
 );
+
+//Recuperar el valor del data layer o hacer una accion contra el
+export const useDataLayerValue = () => useContext(DataLayerContext);
