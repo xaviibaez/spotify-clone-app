@@ -13,7 +13,7 @@ function App() {
   //Almacenar variable temporal, solo en memoria
   const [token, setToken] = useState(null);
   //Objeto del DataLayer -> Context API
-  const [{}, dispatch] = useDataLayerValue();
+  const [{user}, dispatch] = useDataLayerValue();
 
   //Recuperar el token de la URL del metodo
   useEffect(() => {
@@ -28,17 +28,27 @@ function App() {
     //Si hay token lo seteamos
     if (_token) {
       setToken(_token);
+
       //Le damos el token de seguridad a Spotify
       spotify.setAccessToken(_token);
+
       //Recoger el objeto cuenta del usuario
       spotify.getMe().then(user => {
         console.log("User: ", user);
+
+        //Cambiar valor que ponemos en el switch de reducer.js
+        dispatch({
+          type : 'SET_USER',
+          user : user,
+        })
       })
     }
 
     console.log("Token: ", _token);
   }, []);
 
+  console.log("User: ", user);
+  
   //El return es lo que se muestra en la web!
   return (
     <div className="App">
