@@ -9,7 +9,7 @@ initialState
 reducer         
 childer:        Las etiquetas que hay dentro de <DataLayer> en el index.js
 */
-export const DataLayer = ({ initialState, reducer, children}) => (
+export const DataLayer = ({initialState, reducer, children}) => (
     <DataLayerContext.Provider value = {useReducer(reducer, initialState)}>
         {children}
     </DataLayerContext.Provider>
