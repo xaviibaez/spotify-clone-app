@@ -4,6 +4,7 @@ import Login from './Login';
 import { getTokenFromUrl } from './spotify';
 import SpotifyWebApi from "spotify-web-api-js";
 import Player from "./Player"
+import { useDataLayerValue } from "./DataLayer"
 
 //Objeto general con el que usaremos con la api de spotify
 const spotify = new SpotifyWebApi();
@@ -11,14 +12,16 @@ const spotify = new SpotifyWebApi();
 function App() {
   //Almacenar variable temporal, solo en memoria
   const [token, setToken] = useState(null);
+  //Objeto del DataLayer -> Context API
+  const [{}, dispatch] = useDataLayerValue();
 
   //Recuperar el token de la URL del metodo
   useEffect(() => {
+    //Objeto donde esta almacenado el token
     const hash = getTokenFromUrl();
     //No mostrar el token  de seguridad en la URL -> Lo limpiamos
     window.location.hash = "";
 
-    //NO ENTIENDO DE DONDE SALE ACCESS TOKEN
     //_token es un token temporal
     const _token = hash.access_token;
 
