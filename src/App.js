@@ -11,9 +11,8 @@ const spotify = new SpotifyWebApi();
 
 function App() {
   //Almacenar variable temporal, solo en memoria
-  const [token, setToken] = useState(null);
   //Objeto del DataLayer -> Context API
-  const [{user}, dispatch] = useDataLayerValue();
+  const [{user, token}, dispatch] = useDataLayerValue();
 
   //Recuperar el token de la URL del metodo
   useEffect(() => {
@@ -27,7 +26,10 @@ function App() {
 
     //Si hay token lo seteamos
     if (_token) {
-      setToken(_token);
+      dispatch({
+        type: "SET_TOKEN",
+        token: _token,
+      })
 
       //Le damos el token de seguridad a Spotify
       spotify.setAccessToken(_token);
@@ -47,7 +49,8 @@ function App() {
     console.log("Token: ", _token);
   }, []);
 
-  console.log("User: ", user);
+  //console.log("User1: ", user);
+  //console.log("Token1: ", token);
   
   //El return es lo que se muestra en la web!
   return (
@@ -55,7 +58,7 @@ function App() {
       {
         token ?
           //Si hay token vamos a la siguiente pagina
-          <Player />
+          <Player spotify={spotify}/>
         : 
           //Si no hay token volvemos al -> codigo de .Login
           <Login />
