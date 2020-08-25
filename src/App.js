@@ -54,7 +54,7 @@ function App() {
   
   //El return es lo que se muestra en la web!
   return (
-    <div className="App">
+    <div className="app">
       {
         token ?
           //Si hay token vamos a la siguiente pagina
