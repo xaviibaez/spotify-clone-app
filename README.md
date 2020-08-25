@@ -10,9 +10,13 @@ Install Spotify API:
 
 ### `npm i spotify-web-api-js`
 
-Install Material UI:
+Install Material UI Core:
 
 ### `npm install @material-ui/core`
+
+Install Material UI Icons:
+
+### `npm i @material-ui/icons`       
 
 In the project directory, you can run:
 
