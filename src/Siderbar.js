@@ -8,9 +8,9 @@ function Siderbar() {
         <h1>SIDEBAR</h1>
         <img className="sidebar_logo" alt=""/>
 
-        <SidebarOption option="Home"/>
-        <SidebarOption option="Search"/>
-        <SidebarOption option="Your Library"/>
+        <SidebarOption title="Home"/>
+        <SidebarOption title="Search"/>
+        <SidebarOption title="Your Library"/>
     </div>
     )
 }
