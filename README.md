@@ -6,9 +6,13 @@ Create APP:
 
 ### `npx create-react-app spotify-clone-app`
 
-Spotify API:
+Install Spotify API:
 
 ### `npm i spotify-web-api-js`
+
+Install Material UI:
+
+### `npm install @material-ui/core`
 
 In the project directory, you can run:
 
