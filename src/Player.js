@@ -10,7 +10,6 @@ function Player({ spotify }) {
     //Configurado en Index.js
     return (
         <div className="player">
-            <h1>PLAYER</h1>
             <div className="player__body">
                 <Sidebar />
                 <Body />
