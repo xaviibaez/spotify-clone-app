@@ -1,6 +1,8 @@
 import React from 'react'
 import "./Sidebar.css";
 import SidebarOption from './SidebarOption';
+import { useDataLayerValue } from "./DataLayer";
+
 /* 
 Iconos material UI
 https://material-ui.com/es/components/material-icons/
@@ -10,6 +12,8 @@ import SearchIcon from "@material-ui/icons/Search";
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic";
 
 function Siderbar() {
+    const [{playlists}, dispatch] = useDataLayerValue();
+
     return (
         <div className="sidebar">
         <h1>SIDEBAR</h1>
@@ -18,6 +22,16 @@ function Siderbar() {
         <SidebarOption Icon={HomeIcon} title="Home"/>
         <SidebarOption Icon={SearchIcon} title="Search"/>
         <SidebarOption Icon={LibraryMusicIcon} title="Your Library"/>
+
+        <br />
+        <strong className="sidebar__title">PLAYLIST</strong>
+        <hr />
+
+        {/* Steamos las playlist del DataLayer */}
+        {playlists?.items?.map((playlist) => (
+            <SidebarOption title={playlist.name} />
+        ))}
+
     </div>
     )
 }

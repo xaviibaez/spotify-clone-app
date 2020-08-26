@@ -4,7 +4,8 @@ export const initialState = {
     playlists: [],
     playing: false,
     item: null,
-    token : null,
+    token: null,
+    playlists: null,
 };
 
 //Reducer -> estado del data layer y la accion (manipular como se muestra el dataLayer)
@@ -28,6 +29,15 @@ const reducer = (state, action) => {
                 //Setear el nuevo token
                 token: action.token,
             };
+
+        case "SET_PLAYLISTS":
+            return {
+                //No variar su estado
+                ...state,
+                //Setear la nueva playlist
+                playlists: action.playlists,
+            };
+
         default:
             return state;
     }
