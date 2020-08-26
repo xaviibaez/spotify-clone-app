@@ -11,7 +11,7 @@ function Player({ spotify }) {
     return (
         <div className="player">
             <h1>PLAYER</h1>
-            <div className="player_body">
+            <div className="player__body">
                 <Sidebar />
                 <Body />
             </div>
