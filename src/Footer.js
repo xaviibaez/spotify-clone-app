@@ -13,14 +13,20 @@ import PlaylistPlayIcon from "@material-ui/icons/PlaylistPlay";
 function Footer() {
     return (
         <div className="footer">
+            {/* FOOTER LEFT */}
             <div className="footer__left">
-                <p>Footer</p>
+                <p>Footer left</p>
             </div>
+            {/* FOOTER CENTER - SONG CONTROLLERS*/}
             <div className="footer__center">
-                <p>Footer</p>
+                <ShuffleIcon className="footer__green" />
+                <SkipPreviousIcon className="footer__icon" />
+                <PlayCircleOutlineIcon fontSize="large" className="footer__icon" />
+                <SkipNextIcon className="footer__icon" />
             </div>
+            {/* FOOTER RIGHT - VOLUME CONTROLS*/}
             <div className="footer__right">
-                <p>Footer</p>
+                <p>Footer right</p>
             </div>
         </div>
     )
