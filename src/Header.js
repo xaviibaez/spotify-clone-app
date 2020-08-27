@@ -3,6 +3,7 @@ import './Header.css';
 
 /* Iconos */
 import SearchIcon from "@material-ui/icons/Search";
+import { Avatar } from '@material-ui/core';
 
 function Header() {
     return (
@@ -15,7 +16,9 @@ function Header() {
                 />
             </div>
             <div className="header__right">
-
+                {/* Icono de usuario */}
+                <Avatar src="" alt="RQ" />
+                <h4>Xavi</h4>
             </div>
         </div>
     );
