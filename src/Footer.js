@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Footer.css";
+
 /* Iconos material UI */
 import PlayCircleOutlineIcon from "@material-ui/icons/PlayCircleOutline";
 import SkipPreviousIcon from "@material-ui/icons/SkipPrevious";
@@ -18,8 +19,12 @@ function Footer() {
         <div className="footer">
             {/* FOOTER LEFT - ALBUM AND SONG DETAILS */}
             <div className="footer__left">
-                <p>Footer left</p>
+                <img className="footer__albumLogo" src="" alt="" />
+                <div className="footer__songInfo">
+                    
+                </div>
             </div>
+
             {/* FOOTER CENTER - SONG CONTROLLERS */}
             <div className="footer__center">
                 <ShuffleIcon className="footer__green" />
@@ -28,6 +33,7 @@ function Footer() {
                 <SkipNextIcon className="footer__icon" />
                 <RepeatIcon className="footer__green" />
             </div>
+
             {/* FOOTER RIGHT - VOLUME CONTROLS */}
             <div className="footer__right">
                 <Grid container spacing={2}>
@@ -43,7 +49,7 @@ function Footer() {
                 </Grid>
             </div>
         </div>
-    )
+    );
 }
 
 export default Footer
