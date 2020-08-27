@@ -27,7 +27,10 @@ function Siderbar() {
         <strong className="sidebar__title">PLAYLIST</strong>
         <hr />
 
-        {/* Steamos las playlist del DataLayer */}
+        {/* 
+            Steamos las playlist del DataLayer 
+            Es un map asi que se itera
+        */}
         {playlists?.items?.map((playlist) => (
             <SidebarOption title={playlist.name} />
         ))}
