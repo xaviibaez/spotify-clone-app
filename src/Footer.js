@@ -10,23 +10,37 @@ import VolumeDownIcon from "@material-ui/icons/VolumeDown";
 import PauseCircleOutlineIcon from "@material-ui/icons/PauseCircleOutline";
 import PlaylistPlayIcon from "@material-ui/icons/PlaylistPlay";
 
+/* Grid */
+import { Grid, Slider } from "@material-ui/core";
+
 function Footer() {
     return (
         <div className="footer">
-            {/* FOOTER LEFT */}
+            {/* FOOTER LEFT - ALBUM AND SONG DETAILS */}
             <div className="footer__left">
                 <p>Footer left</p>
             </div>
-            {/* FOOTER CENTER - SONG CONTROLLERS*/}
+            {/* FOOTER CENTER - SONG CONTROLLERS */}
             <div className="footer__center">
                 <ShuffleIcon className="footer__green" />
                 <SkipPreviousIcon className="footer__icon" />
                 <PlayCircleOutlineIcon fontSize="large" className="footer__icon" />
                 <SkipNextIcon className="footer__icon" />
+                <RepeatIcon className="footer__green" />
             </div>
-            {/* FOOTER RIGHT - VOLUME CONTROLS*/}
+            {/* FOOTER RIGHT - VOLUME CONTROLS */}
             <div className="footer__right">
-                <p>Footer right</p>
+                <Grid container spacing={2}>
+                    <Grid item>
+                        <PlaylistPlayIcon />
+                    </Grid>
+                    <Grid item>
+                        <VolumeDownIcon />
+                    </Grid>
+                    <Grid item xs>
+                        <Slider aria-labelledby="continuous-slider" />
+                    </Grid>
+                </Grid>
             </div>
         </div>
     )
