@@ -27,7 +27,19 @@ function Body({spotify}) {
                 </div>
             </div>
 
+            <div className="body__songs">
+                {/* Iconos */}
+                <div className="body__icons">
+                    <PlayCircleFilledIcon
+                        className="body__shuffle"
+                        //onClick={playPlaylist}
+                    />
+                    <FavoriteIcon fontSize="large" />
+                    <MoreHorizIcon />
+                </div>
 
+                
+            </div>
 
         </div>
     );
