@@ -38,9 +38,9 @@ function Body({spotify}) {
                     <MoreHorizIcon />
                 </div>
 
+                {/* Lista de canciones */}
                 
             </div>
-
         </div>
     );
 }
