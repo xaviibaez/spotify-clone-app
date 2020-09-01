@@ -2,6 +2,7 @@ import React from 'react';
 import "./Body.css";
 import Header from "./Header";
 import { useDataLayerValue } from "./DataLayer";
+import SongRow from "./SongRow";
 
 // Iconos
 import PlayCircleFilledIcon from "@material-ui/icons/PlayCircleFilled";
@@ -39,7 +40,13 @@ function Body({spotify}) {
                 </div>
 
                 {/* Lista de canciones */}
-                
+                {/* 
+                    Iteramos por cada una de las canciones
+                    Las mostramos con detalle en SongRow  
+                */}
+                {discover_weekly?.tracks.items.map((item) => (
+                    <SongRow track={item.track} />
+                ))}
             </div>
         </div>
     );
